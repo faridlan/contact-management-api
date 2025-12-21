@@ -61,6 +61,7 @@ describe('SeederController (e2e)', () => {
   describe('DELETE /api/seeder/clear', () => {
     beforeEach(async () => {
       await testService.deleteAll();
+      await testService.createUser();
       await testService.createAdmin();
 
       // run seeder first

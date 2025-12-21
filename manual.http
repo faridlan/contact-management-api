@@ -147,4 +147,4 @@ Authorization: 066cddd6-95e8-41fc-8155-e06c22c25a95
 DELETE http://localhost:3000/api/seeder/clear
 Content-Type: application/json
 Accept: application/json
-Authorization: 3101d57d-a8bd-4675-be3e-7cd23462f272
+Authorization: ef128032-a000-4c49-a805-0d13f79f61fc

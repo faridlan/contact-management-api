@@ -1,7 +1,7 @@
 {
-  "name": "belajar-nestjs-restful-api",
+  "name": "contact-management-api",
   "version": "0.0.1",
-  "description": "",
+  "description": "Contact Management RESTful API",
   "author": "",
   "private": true,
   "license": "UNLICENSED",
