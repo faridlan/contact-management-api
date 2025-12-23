@@ -14,7 +14,7 @@ export function DeleteUserSwagger() {
     }),
     ApiResponse({
       status: 200,
-      description: 'Successful To Logout',
+      description: 'Successful Logout',
       example: { data: 'True' },
     }),
     ApiUnauthorizedResponseSwagger(),
