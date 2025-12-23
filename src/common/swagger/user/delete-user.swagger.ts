@@ -9,12 +9,12 @@ export function DeleteUserSwagger() {
   return applyDecorators(
     ApiSecuritySwagger(),
     ApiOperation({
-      summary: 'Delete User',
-      description: 'Delete user information.',
+      summary: 'User Logout',
+      description: 'User Logout and delete token',
     }),
     ApiResponse({
       status: 200,
-      description: 'Successful user delete',
+      description: 'Successful To Logout',
       example: { data: 'True' },
     }),
     ApiUnauthorizedResponseSwagger(),

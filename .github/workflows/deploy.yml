@@ -50,5 +50,6 @@ jobs:
           key: ${{ secrets.VM_SSH_KEY }}
           script: |
             cd ~/apps/contact-management-api
-            pwd
-            ls
+            docker compose pull
+            docker compose up -d
+            docker image prune -f
