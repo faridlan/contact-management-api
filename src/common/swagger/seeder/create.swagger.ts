@@ -16,7 +16,11 @@ export function CreateSeederSwagger() {
     ApiResponse({
       status: 200,
       description: 'Seeder created successfully',
-      example: { message: 'Seeder completed successfully' },
+      example: {
+        message: 'Seeder completed successfully',
+        count: 2,
+        usernames: ['john', 'doe'],
+      },
     }),
     ApiForbiddenResponseSwagger(),
     ApiUnauthorizedResponseSwagger(),
