@@ -34,6 +34,8 @@ export class SeederService {
     const data = this.loadSeederData();
     this.logger.info('Seeder transaction started');
 
+    const seederUsernames: string[] = [];
+
     try {
       await this.prismaService.$transaction(async (tx) => {
         for (const userData of data.users) {
@@ -48,6 +50,8 @@ export class SeederService {
               name: userData.name,
             },
           });
+
+          seederUsernames.push(user.username);
 
           for (const contactData of userData.contacts ?? []) {
             const contact = await tx.contact.create({
@@ -77,7 +81,11 @@ export class SeederService {
       });
 
       this.logger.info('Seeder transaction committed');
-      return { message: 'Seeder completed successfully' };
+      return {
+        message: 'Seeder completed successfully',
+        count: seederUsernames.length,
+        usernames: seederUsernames,
+      };
     } catch (error) {
       this.logger.error('Seeder transaction rolled back', error);
       throw error;
